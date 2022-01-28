@@ -46,7 +46,7 @@ export default function Screen({ navigation }) {
           <StatusBar style="dark" />
           <Header navigation={navigation} />
           <BookingList />
-          <Menu p={2} pt={3} navigation={navigation} />
+          {/* <Menu p={2} pt={3} navigation={navigation} /> */}
           <News navigation={navigation} />
         </ScrollView>
       </SafeAreaView>

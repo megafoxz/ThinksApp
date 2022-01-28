@@ -61,8 +61,8 @@ export default function menu({ navigation }) {
 
   return (
     <Box>
-      <ScalableText adjustsFontSizeToFit style={styles.whatAreYouLooking}>
-        Bạn đang cần hỗ trợ gì?
+      <ScalableText adjustsFontSizeToFit style={styles.MyTasksTitle}>
+        My Tasks
       </ScalableText>
       {listMenu.map((item, index) => (
         <HStack
@@ -111,11 +111,11 @@ export default function menu({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  whatAreYouLooking: {
+  MyTasksTitle: {
     backgroundColor: "transparent",
     lineHeight: 27,
     color: "rgba(38,44,61,1)",
-    fontSize: 18,
+    fontSize: 24,
     marginTop: 22,
     marginLeft: 25,
     fontWeight: "bold",

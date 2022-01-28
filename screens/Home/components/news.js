@@ -21,8 +21,8 @@ export default function News({ navigation }) {
 
   return (
     <Box width={SIZES.width} p={2}>
-      <ScalableText adjustsFontSizeToFit style={styles.newsTitle}>
-        Tin tức
+      <ScalableText adjustsFontSizeToFit style={styles.taskTitle}>
+        My Tasks
       </ScalableText>
       <SafeAreaView>
         <Box width={SIZES.width * 0.95} justifyContent="center" direction="row">
@@ -44,11 +44,11 @@ export default function News({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  newsTitle: {
+  taskTitle: {
     backgroundColor: "transparent",
     lineHeight: 27,
     color: "rgba(38,44,61,1)",
-    fontSize: 18,
+    fontSize: 24,
     marginTop: 22,
     marginLeft: 15,
     fontWeight: "bold",

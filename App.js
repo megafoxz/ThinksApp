@@ -58,7 +58,7 @@ export default function App() {
       <CommonProvider>
         <NavigationContainer>
           <Stack.Navigator
-            initialRouteName={authen == true ? "OnBoarding" : defaultScreen}
+            initialRouteName={authen == false ? "OnBoarding" : defaultScreen}
             screenOptions={{
               headerShown: false,
             }}

@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 //Constant
-import { images } from "../../constants";
+import { COLORS, images } from "../../constants";
 import * as Device from "expo-device";
 import ScalableText from "react-native-text";
 
@@ -22,9 +22,10 @@ const TabBarHome = ({ activeName }) => {
         zIndex: 2,
         position: "absolute",
         flexDirection: "row",
-        bottom: osName == "Android" ? 20 : 40,
-        paddingRight: "5%",
-        paddingLeft: "5%",
+        bottom: 0,
+        // bottom: osName == "Android" ? 20 : 40,
+        // paddingRight: "5%",
+        // paddingLeft: "5%",
       }}
     >
       <View style={styles.tabBarHomeDark}>
@@ -108,7 +109,7 @@ const TabBarHome = ({ activeName }) => {
                 Schedule
               </ScalableText>
             </TouchableOpacity>
-            {/* <TouchableOpacity
+            <TouchableOpacity
               style={
                 value.activeName == "Call"
                   ? styles.iconsActive
@@ -145,9 +146,9 @@ const TabBarHome = ({ activeName }) => {
                   marginTop: 1,
                 }}
               >
-                Call
+                Messages
               </Text>
-            </TouchableOpacity> */}
+            </TouchableOpacity>
             <TouchableOpacity
               style={
                 value.activeName == "User"
@@ -201,12 +202,11 @@ const styles = StyleSheet.create({
     zIndex: 2,
     position: "absolute",
     flexDirection: "row",
-    bottom: 40,
     paddingRight: "5%",
     paddingLeft: "5%",
   },
   tabBarHomeDark: {
-    height: 72,
+    height: 110,
     width: "100%",
   },
   iconsInActive: {
@@ -214,9 +214,10 @@ const styles = StyleSheet.create({
     marginRight: "8%",
     marginLeft: "8%",
     marginTop: 8,
+    bottom: 5,
   },
   rectangle7: {
-    height: 72,
+    height: 110,
     borderRadius: 16,
     shadowColor: "rgba(0,0,0,0.12)",
     shadowOffset: {
@@ -252,15 +253,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingTop: 8,
     paddingBottom: 8,
-    paddingRight: 8,
+    paddingRight: 10,
     paddingLeft: 15,
     height: 40,
-    width: 110,
     borderRadius: 10,
-    backgroundColor: "rgba(255,163,123,1)",
+    backgroundColor: COLORS.black,
     flexDirection: "row",
     elevation: 3,
     alignItems: "center",
+    bottom: 5,
   },
   iconsCalendar2: {
     height: 24,

@@ -8,6 +8,7 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
+
 import ScalableText from "react-native-text";
 
 // constants
@@ -19,20 +20,18 @@ import { COLORS, FONTS, SIZES } from "../constants";
 
 const onBoardings = [
   {
-    title: "Quality reputation",
-    description:
-      "The team of reputable doctors has many years of professional experience.",
+    title: "Content 1",
+    description: "Sub-content 1",
     img: onboarding1,
   },
   {
-    title: "Online health check",
-    description: "Easy and convenient online check-ups right from your home.",
+    title: "Content 2",
+    description: "Sub-content 2",
     img: onboarding2,
   },
   {
-    title: "Research, deep testing",
-    description:
-      "Ensure the most accurate results for the health of you and your family.",
+    title: "Content 3",
+    description: "Sub-content 3",
     img: onboarding3,
   },
 ];
@@ -130,16 +129,16 @@ const OnBoarding = ({ navigation }) => {
                 position: "relative",
                 justifyContent: "center",
                 display: "flex",
-                bottom: 20,
+                bottom: 30,
                 width: "90%",
                 marginRight: "5%",
                 marginLeft: "5%",
-                height: 44,
-                borderTopLeftRadius: 15,
-                borderBottomLeftRadius: 15,
-                borderBottomRightRadius: 15,
-                borderTopRightRadius: 15,
-                backgroundColor: COLORS.orange,
+                height: 60,
+                borderTopLeftRadius: 30,
+                borderBottomLeftRadius: 30,
+                borderBottomRightRadius: 30,
+                borderTopRightRadius: 30,
+                backgroundColor: COLORS.black,
                 elevation: 3,
               }}
               onPress={() => {
@@ -154,7 +153,7 @@ const OnBoarding = ({ navigation }) => {
                   textAlign: "center",
                 }}
               >
-                {completed ? "Get Start !" : "Skip"}
+                {completed ? "Continue" : "Skip"}
               </ScalableText>
             </TouchableOpacity>
           </View>
@@ -224,7 +223,7 @@ const styles = StyleSheet.create({
   },
   dot: {
     borderRadius: SIZES.radius,
-    backgroundColor: COLORS.orange,
+    backgroundColor: COLORS.black,
     marginHorizontal: SIZES.radius / 4,
   },
 });
